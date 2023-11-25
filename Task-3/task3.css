@@ -1,0 +1,150 @@
+/*colors for the line and circles as given in the specification*/
+/*width given according to specification*/
+/*height according to specification*/
+/*hover color given in specification*/
+body {
+  background-color: lightcyan;
+}
+
+/*mixin element for aligining the items*/
+.Lines {
+  display: grid;
+  margin-top: 30px;
+  width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 4;
+}
+
+.circle_shapes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 30px;
+}
+
+#circle-1 {
+  width: 70px;
+  height: 70px;
+}
+
+#circle-2 {
+  width: 80px;
+  height: 80px;
+}
+
+#circle-3 {
+  width: 90px;
+  height: 90px;
+}
+
+#circle-4 {
+  width: 100px;
+  height: 100px;
+}
+
+#Line-1,
+#circle-1 {
+  background-color: #4e89ae;
+}
+
+#Line-2,
+#circle-2 {
+  background-color: #43658b;
+}
+
+#Line-3,
+#circle-3 {
+  background-color: #ed6663;
+}
+
+#Line-4,
+#circle-4 {
+  background-color: #ffa372;
+}
+
+.circle_shapes div {
+  border-radius: 50%;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+}
+
+#Line-1,
+#Line-2,
+#Line-3,
+#Line-4 {
+  height: 50px;
+}
+
+header,
+footer {
+  background-color: #8ccff7;
+}
+
+#Line-1:hover,
+#Line-2:hover,
+#Line-3:hover,
+#Line-4:hover {
+  background-color: #444;
+  color: #444;
+}
+
+#circle-1:hover,
+#circle-2:hover,
+#circle-3:hover,
+#circle-4:hover {
+  background-color: #444;
+  color: #444;
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+}
+
+@media (min-width: 801px) {
+  .Big_Image {
+    background-image: url("image_400.png");
+    width: 400px;
+    height: 400px;
+  }
+  .Target_Images {
+    background-color: #8ccff7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 800px) and (min-width: 481px) {
+  .Medium_Image {
+    background-image: url("image.png");
+    width: 300px;
+    height: 300px;
+  }
+  .Target_Images {
+    background-color: #8ccff7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .circle_shapes {
+    flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  .Small_Image {
+    background-image: url("image_200.png");
+    width: 200px;
+    height: 200px;
+  }
+  .Target_Images {
+    background-color: #8ccff7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .circle_shapes {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=task3.css.map */

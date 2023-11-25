@@ -1,0 +1,167 @@
+/*colors for the line and circles as given in the specification*/
+$Line-1-color: #4e89ae;
+$Line-2-color: #43658b;
+$Line-3-color: #ed6663;
+$Line-4-color: #ffa372;
+/*width given according to specification*/
+$circle-width-1: 70px;
+$circle-width-2: 80px;
+$circle-width-3: 90px;
+$circle-width-4: 100px;
+
+/*height according to specification*/
+$circle-1-height: 70px;
+$circle-2-height: 80px;
+$circle-3-height: 90px;
+$circle-4-height: 100px;
+$footer-height: 50px;
+
+/*hover color given in specification*/
+$circle-hover-color: #444;
+
+
+body {
+  background-color:  lightcyan;
+}
+/*mixin element for aligining the items*/
+@mixin centerElement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin image-size($url, $width, $height) {
+  background-image: url($url);
+  width: $width;
+  height: $height;
+}
+
+.Lines {
+  display: grid;
+  margin-top: 30px;
+  width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 4;
+  
+}
+
+.circle_shapes {
+  @include centerElement;
+  gap: 15px;
+  margin: 30px;
+}
+
+#circle-1 {
+  width: $circle-1-width;
+  height: $circle-1-height;
+}
+
+#circle-2 {
+  width: $circle-2-width;
+  height: $circle-2-height;
+}
+
+#circle-3 {
+  width: $circle-3-width;
+  height: $circle-3-height;
+}
+
+#circle-4 {
+  width: $circle-4-width;
+  height: $circle-4-height;
+}
+
+#Line-1,
+#circle-1 {
+  background-color: $Line-1-color;
+}
+
+#Line-2,
+#circle-2 {
+  background-color: $Line-2-color;
+}
+
+#Line-3,
+#circle-3 {
+  background-color: $Line-3-color;
+}
+
+#Line-4,
+#circle-4 {
+  background-color: $Line-4-color;
+}
+
+.circle_shapes div {
+  border-radius: 50%;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+}
+#Line-1,
+#Line-2,
+#Line-3,
+#Line-4{
+  height: 50px;
+}
+header,
+footer {
+  background-color: #8ccff7;
+}
+
+#Line-1:hover,
+#Line-2:hover,
+#Line-3:hover,
+#Line-4:hover
+ {
+  background-color: $circle-hover-color;
+  color: $circle-hover-color;
+}
+
+#circle-1:hover,
+#circle-2:hover,
+#circle-3:hover,
+#circle-4:hover
+{
+  background-color: $circle-hover-color;
+  color: $circle-hover-color;
+}
+
+footer {
+  width: 100%;
+  height: $footer-height;
+}
+
+@media (min-width: 801px) {
+  .Big_Image {
+    @include image-size("image_400.png", 400px, 400px);
+  }
+  .Target_Images {
+    background-color: #8ccff7;
+    @include centerElement;
+  }
+}
+
+@media (max-width: 800px) and (min-width: 481px) {
+  .Medium_Image {
+    @include image-size("image.png", 300px, 300px);
+  }
+  .Target_Images {
+    background-color: #8ccff7;
+    @include centerElement;
+  }
+  .circle_shapes {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .Small_Image {
+    @include image-size("image_200.png", 200px, 200px);
+  }
+  .Target_Images {
+    background-color: #8ccff7;
+    @include centerElement;
+  }
+  .circle_shapes {
+    flex-direction: column;
+  }
+}
