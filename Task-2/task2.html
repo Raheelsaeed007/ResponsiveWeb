@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+<!--Using Inline Css for Styling-->
+<style>
+    
+body{
+    background-color: #f0eaea;
+    margin-top: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Navigation bar styling*/
+.nav{
+    background-color: #1e90ff;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.nav li{
+    float:right;
+    margin: 10px;
+    color: white;
+    list-style-type: none;
+    
+}
+.nav a{
+    color: white;
+    text-decoration: none;
+}
+   
+.nav input[type=text]{
+    margin-left: 450px;
+    padding: 10px;
+    width: 200px;
+}
+h1{
+    float: left;
+    color: white;
+    margin-left: 10px;
+}
+/*button tag styling*/
+button{
+    background-color: #1e90ff;
+    color: white;
+    float: right;
+    position:relative;
+    bottom: 0;
+    cursor: pointer;
+    padding: 5px;
+}
+.cards{
+    display: flex;  
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card-container{
+   display: flex;
+   flex-wrap: wrap;
+    justify-content: center;
+    width: 40%;
+    float: left;
+    margin-left: 40px;
+    
+}
+/*Main card styling*/
+.main-card {
+    flex: 2;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+    margin: 10px;
+    justify-content: center;
+    height: fit-content;
+}
+/*Image sizing for the main card image*/
+.main-card img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.small-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 37%;
+    float: left;
+}
+/*Image sizing for the small card images*/
+.small-card img{
+    width: 200px; 
+    height: 250px;
+    object-fit: cover;
+}
+.small-card{
+    background-color: white;
+    padding:25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    flex: 1;
+    height: 500px;
+}
+footer{
+    text-align: center;
+}
+</style>
+<body>
+<!--Starting with a header-->
+    <header>
+    <h1>What's On</h1>
+    <div class="nav">  <!--Creating a div tag for nav bar-->
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">TV</a></li>
+        <li><a href="#">Movies</a></li>
+<div>
+     <input type="text" placeholder="Search...">   <!--A seperate div tag for search bar-->
+</div>
+    </div>
+</header>
+
+<div class="cards">
+<div class="card-container">
+    <div class="main-card"> <!--A div tag for the main picture-->
+        <img src="avengers.jpg">
+        <h3>Avengers-Endgame</h3>
+         <p>After the devastating events of Avengers:Infinity war (2018), the universe is in ruins.<br> With the help of 
+        remaining allies, the avengers assemble once more in order to reverse Thanos actions <br>
+        restore balance to thr universe.</p>
+        <button>More Info...</button>
+    </div>
+</div>
+    <div class="small-card-container">
+    <div class="small-card">  <!--Creating a similar div tag for the 4 images-->
+        <img src="lone-gunmen.jpg">
+        <h3>The Lone gunmen</h3>
+         <p>The X-Files' Lone Gunmen, investigate crimes and conspiracies, often in a silly, comedic and over-the-top fashion.</p>
+        <button>More Info...</button>
+    </div>
+
+    <div class="small-card">
+        <img src="predators.jpg">
+        <h3>Predators</h3>
+         <p>A group of elite warriors parachute into an unfamiliar jungle and are hunted by members of a merciless alien race.</p>
+        <button>More Info...</button>
+    </div>
+
+    <div class="small-card">
+        <img src="millenium.jpg">
+        <h3>Millenium Trilogy</h3>
+         <p>A group of elite warriors parachute into an unfamiliar jungle and are hunted by members of a merciless alien race.</p>
+        <button>More Info...</button>
+    </div>
+
+    <div class="small-card">
+        <img src="rage.jpg">
+        <h3>Rage</h3>
+         <p>A group of elite warriors parachute into an unfamiliar jungle and are hunted by members of a merciless alien race.</p>
+        <button>More Info...</button>
+    </div>
+    </div>
+</div>
+<br>
+<br>
+<!--Footer-->
+<footer>
+    Copyright © 2021 What's On.
+</footer>
+</body>
+</html>
